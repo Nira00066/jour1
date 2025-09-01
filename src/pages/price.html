@@ -3,19 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./dist/css/price.css" />
-    <script src="./dist/javaScript/price.js" defer></script>
+    <link rel="stylesheet" href="./../css/price.css" />
+    <script src="./../js/header.js"></script>
+    <script src="./../js/price.js" defer></script>
     <title>Prix produit</title>
   </head>
   <body>
     <header class="header">
-      <h1>Fiche produit</h1>
+      <div class="title">
+        <h1></h1>
+      </div>
+      <div>
+        <a href="../../index.html">
+          <button>Home</button>
+        </a>
+      </div>
     </header>
     <main>
       <div class="img_produit">
-        <img src="assets/phone.webp" alt="Image produit" id="mainImage" />
+        <img src="/assets/phone.webp" alt="Image produit" id="mainImage" />
       </div>
-
       <div class="container_caract">
         <section class="couleurs">
           <h2>Couleur</h2>
@@ -39,10 +46,10 @@
 
         <section class="tailles">
           <h2>Capacité</h2>
-          <button data-size="64" data-prix="800">64 </button>
-          <button data-size="256" data-prix="900">256 </button>
-          <button data-size="512" data-prix="950">512 </button>
-          <button data-size="1024" data-prix="1000">1024 </button>
+          <button data-size="64" data-prix="800">64</button>
+          <button data-size="256" data-prix="900">256</button>
+          <button data-size="512" data-prix="950">512</button>
+          <button data-size="1024" data-prix="1000">1024</button>
         </section>
 
         <section class="prix">
@@ -56,7 +63,7 @@
         </section>
       </div>
     </main>
-    <template id="template-couleur">
+    <!-- <template id="template-couleur">
       <button data-color="">
         <img src="" alt="" />
       </button>
@@ -68,6 +75,6 @@
 
     <template id="template-prix">
       <h2>Prix : <span> €</span></h2>
-    </template>
+    </template> -->
   </body>
 </html>

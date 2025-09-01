@@ -26,15 +26,15 @@ btnTaille.forEach((btn) => {
   });
 });
 
-// Fonction pour calculer le prix
+// Fonction  prix
 function updatePrice() {
-  let total = 0;
+  let total = 800;
 
   // Prix couleur sélectionnée
   const couleurActive = document.querySelector(".couleurs button.active");
   if (couleurActive) total += parseInt(couleurActive.dataset.prix);
 
-  // Prix taille sélectionnée
+  // Prix taille
   const tailleActive = document.querySelector(".tailles button.active");
   if (tailleActive) total += parseInt(tailleActive.dataset.prix);
 
