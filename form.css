@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: rgb(226, 226, 226);
+    cursor: pointer;
+  }
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ad6d40ed;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.message-box {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.message-box.error {
+  border-color: #b00020;
+  background-color: #ffe0e0;
+  color: #b00020;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.modal.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-close {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ad6d40ed;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
