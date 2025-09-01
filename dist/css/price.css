@@ -1,0 +1,184 @@
+/* Reset rapide */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+main {
+  display: grid;
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Bloc image produit */
+.img_produit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.img_produit img {
+  max-width: 250px;
+  height: auto;
+}
+
+/* Conteneur général */
+.container_caract {
+  display: grid;
+  gap: 20px;
+}
+
+section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Boutons */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background: #f1f1f1;
+}
+
+button:hover {
+  background: #ddd;
+}
+
+button:focus {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+button.active {
+  background: #000000;
+  color: #fff;
+}
+.couleurs {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+.couleurs div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; /* espace entre bouton et texte */
+}
+.couleurs button {
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 10px;
+  border: #ddd 2px solid;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.couleurs button span {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Couleurs des boutons selon data-color */
+button[data-color="blanc"] {
+  background-color: #ffffff;
+  color: #000; /* texte noir sur fond blanc */
+}
+
+button[data-color="rose"] {
+  background-color: #ff69b4;
+}
+
+button[data-color="bleu"] {
+  background-color: #1e90ff;
+}
+
+button[data-color="vert"] {
+  background-color: #32cd32;
+}
+
+/* Boutons couleurs ronds */
+.couleurs button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.couleurs button img {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+}
+
+/* Options supplémentaires (checkboxes) */
+.options label {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.options input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Prix */
+.prix {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .couleurs button {
+    width: 35px;
+    height: 35px;
+  }
+}
