@@ -1,0 +1,32 @@
+* {
+margin:0;
+padding:0;
+}
+.faq{
+    padding:30px;
+    box-sizing: border-box;
+}
+.accordion-item{
+    margin-bottom: 10px;
+}
+.accordion-header{
+    background-color: lightgray;
+    padding:20px;
+    cursor: pointer;
+    /* cursor pointer pour pointer la section */
+}
+.accordion-content{
+    max-height: 0;
+    overflow: hidden;
+/*n'affiche pas le contenu*/
+transition: max-height 0.3s ease;
+}
+.accordion-content p{
+    margin:0;
+    padding: 20px;
+}
+.accordion-item.active .accordion-content{
+    max-height:200px;
+
+
+}
