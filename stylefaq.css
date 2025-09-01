@@ -1,32 +1,100 @@
+/* Reset */
 * {
-margin:0;
-padding:0;
+    margin: 0;
+    padding: 0;
 }
-.faq{
-    padding:30px;
+
+/* En-tête de la page FAQ */
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.faq-header h1 {
+    font-size: 2em;
+    color: var(--color-text);
+}
+
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Bouton "Déplier / Plier tout" */
+.faq-actions {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px;
+}
+#toggleAll {
+    padding: 8px 14px;
+    border: 1px solid var(--color-button-border);
+    border-radius: 8px;
+    background: var(--color-button-bg);
+    cursor: pointer;
+    font-weight: bold;
+}
+#toggleAll:hover {
+    background: var(--color-button-hover);
+}
+
+/* Zone FAQ */
+.faq {
+    padding: 30px;
     box-sizing: border-box;
 }
-.accordion-item{
+
+/* Items FAQ */
+.accordion-item {
     margin-bottom: 10px;
 }
-.accordion-header{
-    background-color: lightgray;
-    padding:20px;
+
+.accordion-header {
+    background-color: var(--color-header-bg);
+    padding: 20px;
     cursor: pointer;
-    /* cursor pointer pour pointer la section */
+    border: 1px solid var(--color-header-border);
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
 }
-.accordion-content{
+
+.accordion-header:hover {
+    background-color: var(--color-header-bg-hover);
+}
+
+.accordion-content {
     max-height: 0;
     overflow: hidden;
-/*n'affiche pas le contenu*/
-transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease;
+    border-left: 1px solid var(--color-content-border);
+    border-right: 1px solid var(--color-content-border);
+    border-bottom: 1px solid var(--color-content-border);
+    border-radius: 0 0 6px 6px;
 }
-.accordion-content p{
-    margin:0;
+
+.accordion-content p {
+    margin: 0;
     padding: 20px;
 }
-.accordion-item.active .accordion-content{
-    max-height:200px;
 
+.accordion-item.active .accordion-content {
+    max-height: 200px;
+}
 
+/* Ajout d'un indicateur visuel + / - */
+.accordion-header::after {
+    content: "+";
+    float: right;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: transform 0.2s ease;
+}
+
+.accordion-item.active .accordion-header::after {
+    content: "−";
 }
