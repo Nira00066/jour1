@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="css/avis.css" />
+
+    <title>TP DOM – Avis clients</title>
+  </head>
+  <body>
+    <main>
+      <section id="avis-section" aria-labelledby="avis-titre">
+        <h2 id="avis-titre">Avis clients</h2>
+
+        <form id="avis-form" aria-describedby="avis-help">
+          <p id="avis-help">Ajoutez votre avis. Tous les champs sont obligatoires.</p>
+
+          <label for="nom">Nom</label>
+          <input type="text" name="nom" id="nom" required />
+
+          <label for="note">Note</label>
+          <select name="note" id="note" required>
+            <option value="">—</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="3" required></textarea>
+
+          <button type="submit">Ajouter l’avis</button>
+        </form>
+
+        <ul id="avis-liste" aria-live="polite" aria-relevant="additions removals"></ul>
+
+        <template id="avis-template">
+          <li class="avis-item">
+            <article>
+              <header>
+                <strong class="avis-nom"></strong>
+                <span class="avis-note" aria-label="note"></span>
+              </header>
+              <p class="avis-message"></p>
+              <button type="button" class="avis-supprimer" aria-label="Supprimer l’avis">Supprimer</button>
+            </article>
+          </li>
+        </template>
+      </section>
+    </main>
+
+    <!-- Importe directement le module de ta fonctionnalité et initialise -->
+
+    <script type="module">
+      import { initAvis } from "./js/reviews.js";
+      document.addEventListener("DOMContentLoaded", initAvis);
+    </script>
+  </body>
+</html>
