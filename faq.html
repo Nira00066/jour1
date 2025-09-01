@@ -1,68 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ</title>
-    <meta name="description" content="Partie Faq du TP du 1 septembre 2025.">
-    <meta name="author" content="Nina, Nuno, Philippe et Jeff">
-    <link rel="icon" href="assets/faq.png" type="image/x-icon">
-    <!-- Feuilles de style CSS -->
-    <link rel="stylesheet" href="stylefaq.css">
-    <link rel="stylesheet" href="variablesFaq.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ</title>
+  <meta name="description" content="Partie Faq du TP du 1 septembre 2025.">
+  <meta name="author" content="Nina, Nuno, Philippe et Jeff">
+  <link rel="icon" href="assets/faq.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="variablesFaq.css">
+  <link rel="stylesheet" href="styleFaq.css">
 </head>
-
 <body>
-    <!-- Titre de la page -->
-    <header class="faq-header">
-        <img src="assets/faq.png" alt="Icône FAQ" class="faq-icon">
-        <h1>FAQ</h1>
-    </header>
+  <!-- Titre -->
+  <header class="faq-header">
+    <img src="assets/faq.png" alt="Icône FAQ" class="faq-icon" />
+    <h1>FAQ</h1>
+  </header>
 
-    <!-- Bouton Déplier/Plier tout -->
+  <!-- Barre d’outils -->
+  <div class="faq-toolbar">
+    <input id="faqSearch" class="faq-search" type="text" placeholder="Rechercher une question (ex: livraison, paiement, etc.)" />
     <div class="faq-actions">
-        <button id="toggleAll" type="button">Déplier tout</button>
+      <button id="toggleAll" class="btn" type="button">Déplier tout</button>
     </div>
+    <label class="exclusive">
+      <input id="exclusiveMode" type="checkbox" />
+      Mode exclusif (1 seule ouverte)
+    </label>
+  </div>
 
-    <!-- Section FAQ -->
-    <div class="faq">
-        <!-- création de l'accordion -->
-        <div class="accordion-item">
-            <div class="accordion-header">Question 1</div>
-            <div class="accordion-content">
-                <p>la réponse 1</p>
-            </div>
-        </div>
+  <!-- Formulaire “Poser une question” -->
+  <form class="ask-form" id="askForm">
+    <input id="askQuestion" type="text" placeholder="Votre question…" required />
+    <textarea id="askAnswer" placeholder="Votre réponse (optionnel)…"></textarea>
+    <button class="btn" type="submit">Ajouter</button>
+  </form>
 
-        <div class="accordion-item">
-            <div class="accordion-header">Question 2</div>
-            <div class="accordion-content">
-                <p>la réponse 2</p>
-            </div>
-        </div>
+  <!-- Liste FAQ (générée dynamiquement) -->
+  <div class="faq" id="faqList"></div>
+  <div class="faq-empty" id="faqEmpty" style="display:none;">Aucun résultat pour cette recherche.</div>
 
-        <div class="accordion-item">
-            <div class="accordion-header">Question 3</div>
-            <div class="accordion-content">
-                <p>la réponse 3</p>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <div class="accordion-header">Question 4</div>
-            <div class="accordion-content">
-                <p>la réponse 4</p>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <div class="accordion-header">Question 5</div>
-            <div class="accordion-content">
-                <p>la réponse 5</p>
-            </div>
-        </div>
-    </div>
-
-    <script src="scriptFaq.js"></script>
+  <script src="scriptFaq.js"></script>
 </body>
 </html>

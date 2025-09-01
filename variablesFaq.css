@@ -1,13 +1,17 @@
 :root {
-  --color-text: #333;
+  --color-text: #222;
 
   --color-header-bg: #d9d9d9;
   --color-header-bg-hover: #c4c4c4;
-  --color-header-border: #bbb;
+  --color-header-border: #bdbdbd;
 
-  --color-content-border: #ddd;
+  --color-content-border: #dddddd;
 
   --color-button-bg: #f7f7f7;
-  --color-button-border: #ccc;
-  --color-button-hover: #eee;
+  --color-button-border: #cfcfcf;
+  --color-button-hover: #eeeeee;
+
+  --radius: 10px;
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.35s ease;
 }
